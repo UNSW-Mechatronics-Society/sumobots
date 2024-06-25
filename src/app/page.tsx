@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { TimelineData } from "./data/TimelineData";
+import { Fragment, useEffect, useState } from "react";
+import { NextUpData, TimelineData } from "./data/TimelineData";
 import Link from "next/link";
+import { SponsorData } from "./data/SponsorsData";
 import Head from "next/head";
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
     return timeString;
   }
   useEffect(() => {
+    setShowdownDate(updateCountdown());
     const intervalId = setInterval(
       () => setShowdownDate(updateCountdown()),
       1000
@@ -42,11 +44,14 @@ export default function Home() {
     return () => {
       clearInterval(intervalId);
     };
-  });
+  }, []);
   // Call the updateCountdown function every second
 
   return (
-    <>
+    <Fragment>
+      <Head>
+        <title>My page title</title>
+      </Head>
       <main className="w-full">
         <div className="container h-[66vh] flex flex-col items-center justify-center gap-8">
           <h1 className="flex flex-col items-center font-display leading-none col-span-full w-full">
@@ -102,20 +107,15 @@ export default function Home() {
               <Image
                 width={445}
                 height={250}
-                src={"/2024 Week 4 Sumo.png"}
-                alt="silly gif of robot"
+                src={"/assembly.gif"}
+                alt={NextUpData.title}
               ></Image>
             </div>
             <div className="col-span-7 flex flex-col lg:mt-8 lg:col-span-full">
-              <h3 className="font-display text-blue-400">
-                Soldering, Wiring and Motor Control Workshop
-              </h3>
+              <h3 className="font-display text-blue-400">{NextUpData.title}</h3>
               <div className="flex flex-col text-xl">
-                <p>
-                  UNSW Design Next Studio, Ainsworth Building (J17), Level 5,
-                  Rooms 503-504
-                </p>
-                <p>Thursday, June 20, 2024 at 6 PM</p>
+                <p>{NextUpData.location}</p>
+                <p>{NextUpData.time}</p>
               </div>
             </div>
           </section>
@@ -179,42 +179,20 @@ export default function Home() {
           <section className="container  pb-24">
             <h2 className="col-span-full">Proudly Sponsored By</h2>
             <div className="col-span-full grid grid-cols-8 gap-8 justify-items-center max-h-64 h-full">
-              <div className="col-span-2 lg:col-span-4 rounded-full h-full aspect-square overflow-hidden">
-                <Image
-                  width={400}
-                  height={400}
-                  className="h-full w-full object-cover"
-                  src={"/images/sponsors/Ant.webp"}
-                  alt="Ant61 sponsor logo"
-                ></Image>
-              </div>
-              <div className="col-span-2 lg:col-span-4 rounded-full h-full aspect-square overflow-hidden">
-                <Image
-                  width={200}
-                  height={200}
-                  className="h-full w-full object-cover"
-                  src={"/images/sponsors/EA.webp"}
-                  alt="Engineers Australia sponsor logo"
-                ></Image>
-              </div>
-              <div className="col-span-2 lg:col-span-4 rounded-full h-full aspect-square overflow-hidden">
-                <Image
-                  width={200}
-                  height={200}
-                  className="h-full w-full object-cover"
-                  src={"/images/sponsors/Makerspace.webp"}
-                  alt="Makerspace sponsor logo"
-                ></Image>
-              </div>
-              <div className="col-span-2 lg:col-span-4 rounded-full h-full aspect-square overflow-hidden">
-                <Image
-                  width={200}
-                  height={200}
-                  className="h-full w-full object-cover"
-                  src={"/images/sponsors/robogals.webp"}
-                  alt="Robogals sponsor logo"
-                ></Image>
-              </div>
+              {SponsorData.map((data) => (
+                <div
+                  key={data.name}
+                  className="col-span-2 lg:col-span-4 rounded-full h-full aspect-square overflow-hidden"
+                >
+                  <Image
+                    width={200}
+                    height={200}
+                    className="h-full w-full object-cover"
+                    src={data.src}
+                    alt={`${data.name} logo`}
+                  ></Image>
+                </div>
+              ))}
             </div>
           </section>
           {/* <section className="container">
@@ -222,6 +200,6 @@ export default function Home() {
         </section> */}
         </div>
       </main>
-    </>
+    </Fragment>
   );
 }

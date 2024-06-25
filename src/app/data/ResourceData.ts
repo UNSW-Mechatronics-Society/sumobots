@@ -49,13 +49,13 @@ export const InternalVideoResourceData: ResourceData[] = [
     description: "Watch our Sumobots 2024 Trailer on our Youtube!",
     url: "https://www.youtube.com/watch?v=BNlw9fUDNVc",
   },
-  {
-    image: "/images/resources/prizes.png",
-    title: "Prizes (Bugged)",
-    description:
-      "Do you have what it takes to win part of the 𝐋𝐀𝐑𝐆𝐄𝐒𝐓 𝐂𝐀$𝐇 𝐏𝐑𝐈𝐙𝐄 𝐏𝐎𝐎𝐋 𝐈𝐍 𝐓𝐇𝐄 𝐇𝐈𝐒𝐓𝐎𝐑𝐘 𝐎𝐅 𝐒𝐔𝐌𝐎𝐁𝐎𝐓𝐒?",
-    url: "https://cdn.discordapp.com/attachments/1242437537277149205/1247896907305451551/447776357_7825687514160303_3050409131679275649_n.mp4?ex=667772cf&is=6676214f&hm=ddf1a2ec3ee4f60d2c0ed676467441c27c7773d078cea65469f15d71fa3a8f9b&",
-  },
+  // {
+  //   image: "/images/resources/prizes.png",
+  //   title: "Prizes (Bugged)",
+  //   description:
+  //     "Do you have what it takes to win part of the 𝐋𝐀𝐑𝐆𝐄𝐒𝐓 𝐂𝐀$𝐇 𝐏𝐑𝐈𝐙𝐄 𝐏𝐎𝐎𝐋 𝐈𝐍 𝐓𝐇𝐄 𝐇𝐈𝐒𝐓𝐎𝐑𝐘 𝐎𝐅 𝐒𝐔𝐌𝐎𝐁𝐎𝐓𝐒?",
+  //   url: "https://cdn.discordapp.com/attachments/1242437537277149205/1247896907305451551/447776357_7825687514160303_3050409131679275649_n.mp4?ex=667772cf&is=6676214f&hm=ddf1a2ec3ee4f60d2c0ed676467441c27c7773d078cea65469f15d71fa3a8f9b&",
+  // },
   {
     image: "/images/resources/ArduinoBasicsVideoThumbnail.jpg",
     title: "Arduino Basics Tutorial",
