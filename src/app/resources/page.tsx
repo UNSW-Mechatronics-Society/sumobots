@@ -1,10 +1,10 @@
-import Image from "next/image";
 import {
   InternalResourceData,
   ExternalResourceData,
   InternalVideoResourceData,
 } from "../data/ResourceData";
 import Link from "next/link";
+import { PathedImage } from "../components/Image/PathedImage";
 
 interface ResourceCardProps {
   title: string;
@@ -21,13 +21,13 @@ function ResourceCard({ title, url, image, description }: ResourceCardProps) {
       className="bg-[#07070e] col-span-3 2xl:col-span-4 lg:col-span-6 md:col-span-full aspect-[3/4]  group transition duration-300 shadow-none shadow-[#23274c77] hover:shadow-[#23274c77] hover:shadow-xl"
     >
       <div className="w-full aspect-video bg-black overflow-hidden">
-        <Image
+        <PathedImage
           width={400}
           height={225}
           src={image}
-          alt="resource"
+          alt={title}
           className="group-hover:scale-105 transition"
-        ></Image>
+        ></PathedImage>
       </div>
       <div className="w-full px-4">
         <h2 className="text-2xl mt-4 mb-2 text-blue-400 group-hover:underline">

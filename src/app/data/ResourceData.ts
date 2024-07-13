@@ -62,6 +62,25 @@ export const InternalVideoResourceData: ResourceData[] = [
     description: "Watch our Arduino Basics Tutorial on our Youtube!",
     url: "https://www.youtube.com/watch?v=Qaol1ywlcjQ",
   },
+  {
+    image: "/images/resources/CADVideoThumbnail.jpg",
+    title: "CAD - Sumobots 2024",
+    description: "This video covers basic CAD using Onshape!",
+    url: "https://www.youtube.com/watch?v=2V1Y9ENvDSM",
+  },
+  {
+    image: "/images/resources/MotorControl.jpg",
+    title: "Motor Control - Sumobots 2024",
+    description:
+      "This video covers motor control using the Arduino and L298N motor driver to get your motors spinning!",
+    url: "https://www.youtube.com/watch?v=PFLQC4x5NoQ",
+  },
+  {
+    image: "/images/resources/3DPrintingVideoThumbnail.jpg",
+    title: "3D Printing With Cura - Sumobots 2024",
+    description: "This video covers basic 3D printing with Cura!",
+    url: "https://www.youtube.com/watch?v=uO-_3uxiNsw",
+  },
 ];
 
 export const ExternalResourceData: ResourceData[] = [
@@ -73,7 +92,7 @@ export const ExternalResourceData: ResourceData[] = [
     url: "https://www.making.unsw.edu.au/access/badges/b/workshop-safety-badge/",
   },
   {
-    image: "https://content.arduino.cc/assets/arduino_logo_1200x630-01.png",
+    image: "/images/resources/arduino.png",
     title: "Arduino IDE",
     description:
       "Please make sure you have installed the Arduino IDE before attending the workshop!",

@@ -7,6 +7,21 @@ export const metadata: Metadata = {
   title: "MTRNSoc Sumobots 2024",
   description: "Official UNSW MTRNSoc Sumobots 2024 website.",
   icons: { icon: "/icon.svg" },
+  twitter: {
+    card: "summary_large_image",
+    title: "MTRNSoc Sumobots 2024",
+    site: "@site",
+    creator: "@creator",
+    images: "https://unsw-mechatronics-society.github.io/sumobots/og.jpg",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://unsw-mechatronics-society.github.io/sumobots/",
+    title: "MTRNSoc Sumobots 2024",
+    description: "Official UNSW MTRNSoc Sumobots 2024 website.",
+    siteName: "MTRNSoc Sumobots 2024",
+    images: "https://unsw-mechatronics-society.github.io/sumobots/og.jpg",
+  },
 };
 
 export default function RootLayout({

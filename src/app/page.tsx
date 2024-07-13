@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import { PathedImage } from "./components/Image/PathedImage";
 import { Fragment, useEffect, useState } from "react";
 import { NextUpData, TimelineData } from "./data/TimelineData";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import { SponsorData } from "./data/SponsorsData";
 import Head from "next/head";
 
 export default function Home() {
-  const targetDate = new Date("2024-07-26T03:24:00");
+  const targetDate = new Date("2024-07-26T17:00:00");
   const currentDate = new Date();
   const timeDifference = targetDate.getTime() - currentDate.getTime();
   let totalSeconds = Math.floor(timeDifference / 1000);
@@ -49,9 +49,6 @@ export default function Home() {
 
   return (
     <Fragment>
-      <Head>
-        <title>My page title</title>
-      </Head>
       <main className="w-full">
         <div className="container h-[66vh] flex flex-col items-center justify-center gap-8">
           <h1 className="flex flex-col items-center font-display leading-none col-span-full w-full">
@@ -84,32 +81,31 @@ export default function Home() {
               </p>
               <Link
                 className="button mt-8"
-                href={
-                  "https://docs.google.com/document/d/1xwoSjIgcmcuwyC4FDiTnI7eXwgkGNUIS/edit?usp=sharing&ouid=102570205003270756266&rtpof=true&sd=true"
-                }
+                href={"/resources/2024 Sumobots Formal Rules.pdf"}
                 target="_blank"
               >
                 Rulebook
               </Link>
             </div>
             <div className="col-span-5 h-full flex items-center overflow-hidden lg:hidden">
-              <Image
+              <PathedImage
                 width={445}
                 height={250}
                 src={"/VR_005.gif"}
                 alt="silly gif of robot"
-              ></Image>
+              ></PathedImage>
             </div>
           </section>
           <section className="container">
             <h2 className="col-span-full">Next Up</h2>
-            <div className="w-full col-span-5 lg:col-span-full">
-              <Image
+            <div className="w-full col-span-5 lg:col-span-full overflow-hidden">
+              <PathedImage
                 width={445}
                 height={250}
                 src={"/assembly.gif"}
                 alt={NextUpData.title}
-              ></Image>
+                className="scale-125"
+              ></PathedImage>
             </div>
             <div className="col-span-7 flex flex-col lg:mt-8 lg:col-span-full">
               <h3 className="font-display text-blue-400">{NextUpData.title}</h3>
@@ -184,13 +180,13 @@ export default function Home() {
                   key={data.name}
                   className="col-span-2 lg:col-span-4 rounded-full h-full aspect-square overflow-hidden"
                 >
-                  <Image
+                  <PathedImage
                     width={200}
                     height={200}
                     className="h-full w-full object-cover"
                     src={data.src}
                     alt={`${data.name} logo`}
-                  ></Image>
+                  ></PathedImage>
                 </div>
               ))}
             </div>

@@ -40,7 +40,7 @@ export const TimelineData: TimelineData[] = [
   {
     week: "5-9",
     topics: "Build Sessions",
-    location: "Design Next Lvl 5 Ainsworth",
+    location: "Kirby Makerspace",
     date: "Tuesday & Thursday 6-8 PM",
   },
   {
