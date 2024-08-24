@@ -40,6 +40,21 @@ export const InternalResourceData: ResourceData[] = [
       "This week we will be covering the basics of soldering, connecting motors to the Arduino and controlling the motor in the Arduino IDE.",
     url: "https://www.canva.com/design/DAGHu56fBBY/QIXAzySqHjnR_vCATQyx5w/edit?utm_content=DAGHu56fBBY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
   },
+
+  {
+    image: "/images/resources/starter code thumbnail.jpg",
+    title: "Starter Code",
+    description:
+      "This guide provides a basic scaffold of code to control a sumobot. We have created 3 separate files for participants of different skill levels.",
+    url: "https://github.com/RyanKwok-rsk/sumobots-code/tree/main",
+  },
+
+  {
+    image: "/images/resources/knockout registration.png",
+    title: "Knockout Registration Form",
+    description: `Hello fellow Sumobot competitors! The time has come to put your creations against each other!`,
+    url: "https://forms.gle/RT6wg7o2BDdCNsHj7",
+  },
 ];
 
 export const InternalVideoResourceData: ResourceData[] = [

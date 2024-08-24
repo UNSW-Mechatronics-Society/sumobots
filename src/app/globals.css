@@ -12,6 +12,12 @@ body {
   .container {
     @apply mx-auto grid grid-cols-12 gap-x-8 w-full;
   }
+  .shadow-centered {
+    --tw-shadow: 0 0 72px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 0px 72px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
 }
 
 @layer utilities {

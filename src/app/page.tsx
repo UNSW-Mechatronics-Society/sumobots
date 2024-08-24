@@ -5,6 +5,14 @@ import { NextUpData, TimelineData } from "./data/TimelineData";
 import Link from "next/link";
 import { SponsorData } from "./data/SponsorsData";
 import Head from "next/head";
+import {
+  AdvancedWinnersData,
+  AestheticWinnersData,
+  ParticipantData,
+  StandardWinnersData,
+} from "./data/ParticipantData";
+import ParticipantCard from "./components/ParticipantCard/ParticipantCard";
+import WinnersCard from "./components/ParticipantCard/WinnersCard";
 
 export default function Home() {
   const targetDate = new Date("2024-07-26T17:00:00");
@@ -61,10 +69,11 @@ export default function Home() {
           </h1>
           <span className="flex flex-col items-center font-display leading-snug col-span-full w-full">
             <span className="text-[3vw] xl:text-[4.27vw] md:text-[7.27vw] ">
-              {showdownDate}
+              {/* {showdownDate} */}
+              EVENT CONCLUDED
             </span>
             <span className="text-[2vw] xl:text-[3vw] md:text-[5.2vw] ">
-              UNTIL SHOWDOWN
+              SEE YOU NEXT YEAR!
             </span>
           </span>
         </div>
@@ -97,7 +106,18 @@ export default function Home() {
             </div>
           </section>
           <section className="container">
-            <h2 className="col-span-full">Next Up</h2>
+            <h2 className="col-span-full ">Watch Our Live Stream</h2>
+            <div className="col-span-full aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/rF5C53Vflls"
+                width="1120"
+                height="630"
+                title="A YouTube video"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+            {/* <h2 className="col-span-full">Next Up</h2>
             <div className="w-full col-span-5 lg:col-span-full overflow-hidden">
               <PathedImage
                 width={445}
@@ -106,14 +126,14 @@ export default function Home() {
                 alt={NextUpData.title}
                 className="scale-125"
               ></PathedImage>
-            </div>
-            <div className="col-span-7 flex flex-col lg:mt-8 lg:col-span-full">
+            </div> */}
+            {/* <div className="col-span-7 flex flex-col lg:mt-8 lg:col-span-full">
               <h3 className="font-display text-blue-400">{NextUpData.title}</h3>
               <div className="flex flex-col text-xl">
                 <p>{NextUpData.location}</p>
                 <p>{NextUpData.time}</p>
               </div>
-            </div>
+            </div> */}
           </section>
           <section className="container">
             <h2 className="col-span-full">Timeline</h2>
@@ -155,6 +175,64 @@ export default function Home() {
               </tbody>
             </table>
           </section>
+          <section className="container">
+            <h2 className="col-span-full ">2024 Advanced Stream Winners</h2>
+            <div className="col-span-full min-h-96 justify-around gap-16 grid-cols-3 grid my-8">
+              {AdvancedWinnersData.map((data, i) => {
+                return (
+                  <WinnersCard
+                    key={data.title}
+                    color={i}
+                    title={data.title}
+                  ></WinnersCard>
+                );
+              })}
+            </div>
+          </section>
+          <section className="container">
+            <h2 className="col-span-full ">2024 Standard Stream Winners</h2>
+            <div className="col-span-full min-h-96 justify-around gap-16 grid-cols-3 grid my-8">
+              {StandardWinnersData.map((data, i) => {
+                return (
+                  <WinnersCard
+                    key={data.title}
+                    color={i}
+                    title={data.title}
+                  ></WinnersCard>
+                );
+              })}
+            </div>
+          </section>
+          <section className="container">
+            <h2 className="col-span-full ">
+              People&apos;s Choice and Most Aesthetic Bot Winners
+            </h2>
+            <div className="col-span-full min-h-96 justify-around gap-16 grid-cols-3 grid my-8">
+              {AestheticWinnersData.map((data) => {
+                return (
+                  <WinnersCard
+                    key={data.title}
+                    color={3}
+                    title={data.title}
+                  ></WinnersCard>
+                );
+              })}
+            </div>
+          </section>
+          <section className="container">
+            <h2 className="col-span-full ">Participants</h2>
+            <div className="flex col-span-full justify-around gap-16 flex- flex-wrap my-8">
+              {ParticipantData.map((data) => {
+                return (
+                  <ParticipantCard
+                    key={data.title}
+                    data={data}
+                  ></ParticipantCard>
+                );
+              })}
+            </div>
+          </section>
+
           <section className="container">
             <h2 className="col-span-full">Resources</h2>
             <div className="col-span-full">
