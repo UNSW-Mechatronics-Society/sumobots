@@ -176,8 +176,8 @@ export default function Home() {
             </table>
           </section>
           <section className="container">
-            <h2 className="col-span-full ">2024 Advanced Stream Winners</h2>
-            <div className="col-span-full min-h-96 justify-around gap-16 grid-cols-3 grid my-8">
+            <h2 className="col-span-full">2024 Advanced Stream Winners</h2>
+            <div className="col-span-full justify-around gap-8 grid-cols-12 grid my-8">
               {AdvancedWinnersData.map((data, i) => {
                 return (
                   <WinnersCard
@@ -190,8 +190,8 @@ export default function Home() {
             </div>
           </section>
           <section className="container">
-            <h2 className="col-span-full ">2024 Standard Stream Winners</h2>
-            <div className="col-span-full min-h-96 justify-around gap-16 grid-cols-3 grid my-8">
+            <h2 className="col-span-full">2024 Standard Stream Winners</h2>
+            <div className="col-span-full min-h-96 justify-around gap-8 grid-cols-12 grid my-8">
               {StandardWinnersData.map((data, i) => {
                 return (
                   <WinnersCard
@@ -205,9 +205,9 @@ export default function Home() {
           </section>
           <section className="container">
             <h2 className="col-span-full ">
-              People&apos;s Choice and Most Aesthetic Bot Winners
+              Most Aesthetic Bot and People&apos;s Choice Winners
             </h2>
-            <div className="col-span-full min-h-96 justify-around gap-16 grid-cols-3 grid my-8">
+            <div className="col-span-full min-h-96 justify-around gap-8 grid-cols-12 grid my-8">
               {AestheticWinnersData.map((data) => {
                 return (
                   <WinnersCard
@@ -221,7 +221,7 @@ export default function Home() {
           </section>
           <section className="container">
             <h2 className="col-span-full ">Participants</h2>
-            <div className="flex col-span-full justify-around gap-16 flex- flex-wrap my-8">
+            <div className="flex col-span-full gap-16 flex-wrap my-8">
               {ParticipantData.map((data) => {
                 return (
                   <ParticipantCard

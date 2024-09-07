@@ -12,7 +12,7 @@ export const ParticipantData: ParticipantData[] = [
   { title: "Diabetos" },
   { title: "Dom-inators" },
   { title: "Freaky Guers" },
-  { title: "Innovation X" },
+  { title: "INNOVATION X" },
   { title: "Mail Skincare Routine" },
   { title: "Outvincible" },
   { title: "Robo People" },

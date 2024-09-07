@@ -1,11 +1,7 @@
 import { PathedImage } from "../Image/PathedImage";
 
 function GoldWrapper({ children }: any) {
-  return (
-    <div className="h-80 aspect-square rounded-2xl shadow-centered shadow-amber-300">
-      {children}
-    </div>
-  );
+  return <div className="h-80 ">{children}</div>;
 }
 function SilverWrapper({ children }: any) {
   return (
@@ -37,61 +33,24 @@ export default function WinnersCard({
   title: string;
   color: number;
 }) {
+  const medal = ["🥇", "🥈", "🥉", ""];
   return (
-    <div className="flex flex-col justify-center gap-12">
-      {color === 0 && (
-        <GoldWrapper>
-          <PathedImage
-            width={470}
-            height={320}
-            className="rounded-2xl"
-            src={`/images/participants/fullsize/${title}.png`}
-            blurDataURL={`/images/participants/blur/${title}.png`}
-            placeholder="blur"
-            alt={title}
-          ></PathedImage>
-        </GoldWrapper>
-      )}
-      {color === 1 && (
-        <SilverWrapper>
-          <PathedImage
-            width={470}
-            height={320}
-            className="rounded-2xl"
-            src={`/images/participants/fullsize/${title}.png`}
-            blurDataURL={`/images/participants/blur/${title}.png`}
-            placeholder="blur"
-            alt={title}
-          ></PathedImage>
-        </SilverWrapper>
-      )}
-      {color === 2 && (
-        <BronzeWrapper>
-          <PathedImage
-            width={470}
-            height={320}
-            className="rounded-2xl"
-            src={`/images/participants/fullsize/${title}.png`}
-            blurDataURL={`/images/participants/blur/${title}.png`}
-            placeholder="blur"
-            alt={title}
-          ></PathedImage>
-        </BronzeWrapper>
-      )}
-      {color === 3 && (
-        <BlueWrapper>
-          <PathedImage
-            width={470}
-            height={320}
-            className="rounded-2xl"
-            src={`/images/participants/fullsize/${title}.png`}
-            blurDataURL={`/images/participants/blur/${title}.png`}
-            placeholder="blur"
-            alt={title}
-          ></PathedImage>
-        </BlueWrapper>
-      )}
-      <p className="font-display text-center text-3xl">{title}</p>
+    <div className="flex flex-col justify-center gap-8 col-span-4 xl:col-span-6 md:col-span-12">
+      <div className="h-80">
+        <PathedImage
+          width={470}
+          height={320}
+          className="object-cover"
+          src={`/images/participants/fullsize/winner_${title}.png`}
+          blurDataURL={`/images/participants/blur/winner_${title}.png`}
+          placeholder="blur"
+          alt={title}
+        ></PathedImage>
+      </div>
+      <p className="font-display text-center text-3xl">
+        {medal[color]}
+        {title}
+      </p>
     </div>
   );
 }

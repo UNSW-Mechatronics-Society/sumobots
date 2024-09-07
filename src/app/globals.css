@@ -46,7 +46,7 @@ h3 {
 }
 td,
 p {
-  @apply text-white text-opacity-70 md:text-lg;
+  @apply text-[#B3B3B3] md:text-lg;
 }
 td {
   @apply md:text-base;
