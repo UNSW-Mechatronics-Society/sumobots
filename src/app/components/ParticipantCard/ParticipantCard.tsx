@@ -8,10 +8,12 @@ export default function ParticipantCard({ data }: { data: { title: string } }) {
     >
       <div className="h-64 aspect-square overflow-hidden">
         <PathedImage
-          width={320}
-          height={320}
+          width={256}
+          height={256}
           className="overflow-hidden"
-          src={`/images/participants/${data.title}.png`}
+          src={`/images/participants/fullsize/${data.title}.png`}
+          blurDataURL={`/images/participants/blur/${data.title}.png`}
+          placeholder="blur"
           alt={data.title}
         ></PathedImage>
       </div>

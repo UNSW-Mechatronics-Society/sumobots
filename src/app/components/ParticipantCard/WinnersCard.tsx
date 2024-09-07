@@ -42,10 +42,12 @@ export default function WinnersCard({
       {color === 0 && (
         <GoldWrapper>
           <PathedImage
-            width={320}
+            width={470}
             height={320}
             className="rounded-2xl"
-            src={`/images/participants/${title}.png`}
+            src={`/images/participants/fullsize/${title}.png`}
+            blurDataURL={`/images/participants/blur/${title}.png`}
+            placeholder="blur"
             alt={title}
           ></PathedImage>
         </GoldWrapper>
@@ -53,10 +55,12 @@ export default function WinnersCard({
       {color === 1 && (
         <SilverWrapper>
           <PathedImage
-            width={320}
+            width={470}
             height={320}
             className="rounded-2xl"
-            src={`/images/participants/${title}.png`}
+            src={`/images/participants/fullsize/${title}.png`}
+            blurDataURL={`/images/participants/blur/${title}.png`}
+            placeholder="blur"
             alt={title}
           ></PathedImage>
         </SilverWrapper>
@@ -64,10 +68,12 @@ export default function WinnersCard({
       {color === 2 && (
         <BronzeWrapper>
           <PathedImage
-            width={320}
+            width={470}
             height={320}
             className="rounded-2xl"
-            src={`/images/participants/${title}.png`}
+            src={`/images/participants/fullsize/${title}.png`}
+            blurDataURL={`/images/participants/blur/${title}.png`}
+            placeholder="blur"
             alt={title}
           ></PathedImage>
         </BronzeWrapper>
@@ -75,10 +81,12 @@ export default function WinnersCard({
       {color === 3 && (
         <BlueWrapper>
           <PathedImage
-            width={320}
+            width={470}
             height={320}
             className="rounded-2xl"
-            src={`/images/participants/${title}.png`}
+            src={`/images/participants/fullsize/${title}.png`}
+            blurDataURL={`/images/participants/blur/${title}.png`}
+            placeholder="blur"
             alt={title}
           ></PathedImage>
         </BlueWrapper>
